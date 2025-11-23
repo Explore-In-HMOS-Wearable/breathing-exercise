@@ -8,7 +8,7 @@ struct Main {
   private renderingSettings: RenderingContextSettings = new RenderingContextSettings(true)
   private canvasRenderingContext: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.renderingSettings)
   private animateItem: AnimationItem | null = null;
-  private animateName: string = "animation"; // name
+  private animateName: string = 'animation'; // name
   private timeOut: null | number = null
   @Local isStarted: boolean = false;
   @Local options: ArcButtonOptions | undefined = new ArcButtonOptions({})
@@ -111,7 +111,7 @@ struct Main {
       autoplay: false,
       name: this.animateName,
       contentMode: 'Contain',
-      path: "animation/Breath.json",
+      path: 'animation/Breath.json',
     })
 
 
@@ -125,7 +125,7 @@ struct Main {
   }
 
   destroy() {
-    this.animateItem?.removeEventListener("DOMLoaded");
+    this.animateItem?.removeEventListener('DOMLoaded');
     lottie.destroy(this.animateName);
     this.animateItem = null;
   }

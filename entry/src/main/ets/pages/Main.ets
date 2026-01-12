@@ -111,11 +111,10 @@ struct Main {
       autoplay: false,
       name: this.animateName,
       contentMode: 'Contain',
-      path: 'animation/Breath.json',
+      path: 'animation/Breath.json'
     })
 
 
-    // Animations are loaded asynchronously, any operations on animateItem should be performed within the callback function for when the animation has finished loading.
     this.animateItem.addEventListener('DOMLoaded', (args: Object): void => {
       this.animateItem?.changeColor([225, 25, 100, 1]);
       this.animateItem?.setSpeed(this.speed);
